@@ -1,0 +1,45 @@
+> without __init__.py file we can not create a package. To convert any python folder into package we need to add __init__.py file in that folder.
+> package is a collection of libraries.
+
+
+
+
+           <----------------------   SENSOR folder is root dicectiory   -------------------->   
+
+
+**pipeline**: [pipeline is a sequence if steps that execute in orders]. In machine learning we have training and prediction pipeline. 
+
+** components** : Every pipeline has some components arrange in specific order. [like: data_validation, model, training, model_validation etc.]
+                  - we have to arrange components in a specific order to run a pipeline.
+
+**data_access**: we have to bring our data from some kind of data base like momgoDB, Mysql etc. 
+                 - So, here we wirte a code to bring data in current dicectiory and use like a csv file for model developement.
+ 
+**cloud_storage**: How we can manage file accross cloud. 
+                   We are unsing S3 bucket. here we will write code for how to download file from S3 bucket, 
+                   how to upload file in S3 bucket, how to download model from S3 bucket, how to create bucket Etc.
+
+
+**configuration**:  Here we will manage the connections related configuration for example MongoDB connection. 
+                    we need to centralaized the connection amoung the components.
+
+**constant**:      Every project has some folder name, database name, file name, model name Eg. [model.plk file]. 
+                   These are hard coded values to maintain their names. It contain variable declariation 
+
+**entity**:       We have to manage the input and output of the every component and pipeline also. 
+                  It define the structure like data type of input and output values
+
+**ml**:           You need to customize some of the algorithm. 
+                  [like creating your own loss function, some custom feature engineering, some custom model, custom accuracy Etc.]
+
+
+
+SENSOR FOLDER FILES: 
+
+__init__.py
+**exception.py**     We have to capture the abnormality in your code.
+**logger.py**        What is happening into your code. 
+
+
+
+**ML Artifact**-When ever you running a pipeline. if something is genarating through your pipeline then the output is we called as Artifact.
